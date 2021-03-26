@@ -272,6 +272,11 @@ button {
 
 .selected {
   opacity: 0.6;
+  background-color: #ffdc40;
+}
+
+.yellow {
+  background-color: #ffdc40;
 }
 
 .list .tasks__item input {

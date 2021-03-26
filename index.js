@@ -17,10 +17,16 @@ let ul = toDO.querySelector(".list")
 
 ul.addEventListener(`dragstart`, (evt) => {
   evt.target.classList.add(`selected`);
+
+  evt.target.querySelector(".list-item").classList.add(`yellow`);
 })
 
 ul.addEventListener(`dragend`, (evt) => {
   evt.target.classList.remove(`selected`);
+
+  evt.target.querySelector(".list-item").classList.remove(`yellow`);
+
+
 });
 
 
