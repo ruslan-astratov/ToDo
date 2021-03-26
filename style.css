@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+  width: 3px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: #143861;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #344084;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5882dd;
+}
+
+html {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+button {
+  padding: 0;
+
+  margin: 0;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* 336  236 */
+
+/* Ту-ду лист */
+.toDo-list-wrapper {
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+
+  width: 336px;
+
+  min-height: 236px;
+
+  max-height: 397px;
+
+  padding-bottom: 19px;
+}
+
+/* Жёлтый прямоугольник  */
+.yellow-header {
+  background-color: #ffdc40;
+  height: 28px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 13px;
+}
+
+/* Заголовок     To-Do List  */
+.toDo-list-wrapper h1 {
+  text-align: center;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: capitalize;
+
+  margin-bottom: 18px;
+}
+
+/* Обёртка над элементами списка  и  кнопкой сортировки */
+.wrapper-for-list-items-and-sort-button {
+  display: flex;
+
+  flex-direction: column;
+  padding-left: 28px;
+
+  padding-right: 21px;
+
+  margin-bottom: 18px;
+}
+
+/* КНОПКА  сортировки,   включащая в себя   иконку-стрелку  и  иконку сортировки  */
+.wrapper-for-list-items-and-sort-button button {
+  position: relative;
+  left: 2px;
+  width: 46px;
+  margin-left: auto;
+
+  border: none;
+  background-color: white;
+
+  outline: none;
+  margin-bottom: 9px;
+
+  cursor: pointer;
+}
+
+/* -------------------  Внешний вид КНОПКИ сортировки  при НАВЕДЕНИИ -------------------------------- */
+.wrapper-for-list-items-and-sort-button button:hover svg path {
+  transition: all 0.4s ease;
+  fill: black;
+}
+
+.wrapper-for-list-items-and-sort-button button:hover svg rect {
+  transition: all 0.4s ease;
+  fill: black;
+}
+/* ------------------- // Внешний вид КНОПКИ   сортировки при НАВЕДЕНИИ -------------------------------- */
+
+/*  */
+
+/* ------------------------ Внешний вид стрелочки при клике по КНОПКЕ */
+/* .wrapper-for-list-items-and-sort-button button:active svg:first-child {
+  transform: rotate(180deg);
+} */
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* ------------------------ Внешний вид стрелочки при клике по КНОПКЕ */
+
+/* Список ul */
+.list {
+  list-style-type: none;
+
+  max-height: 202px;
+
+  overflow-y: auto;
+
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/* Элементы списка -  li */
+.list li {
+  position: relative;
+}
+
+/* Инпуты */
+.list li input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+
+  outline: none;
+
+  padding-right: 58px;
+  padding-left: 27px;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/*   */
+
+/* Круглая серая Кнопка     "Удалить элемент списка" */
+.list .delete-button {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #c4c4c4;
+  transition: all 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #833ae0;
+}
+
+/* Псевдоэлементы кнопки - серые чёрточки */
+.list .delete-button::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  top: 9px;
+
+  display: block;
+  background-color: #c4c4c4;
+  width: 12px;
+  height: 1px;
+  transform: rotate(45deg);
+}
+
+.list .delete-button::before {
+  content: "";
+  position: absolute;
+  right: 4px;
+  top: 9px;
+  display: block;
+  background-color: #c4c4c4;
+  width: 12px;
+  height: 1px;
+  transform: rotate(-45deg);
+}
+
+/*  */
+
+/* Кнопка "Добавить */
+.add-new-list {
+  cursor: pointer;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  display: flex;
+  border: none;
+
+  width: 150px;
+  height: 42px;
+  background: #833ae0;
+  border-radius: 71px;
+  margin-left: 91px;
+  margin-right: auto;
+  color: white;
+
+  outline: none;
+  line-height: 41px;
+
+  transition: all 0.3s ease;
+}
+
+.add-new-list:hover {
+  background: #5604c0;
+}
+
+.add-new-list:active {
+  background: #9f68e7;
+}
+
+/*  */
+
+/* Див со знаком "+" */
+.add-new-list div {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  width: 41px;
+  height: 41px;
+  background: #9953f1;
+  border-radius: 71px;
+  margin-right: 13px;
+}
+
+.selected {
+  opacity: 0.6;
+}
+
+.list .tasks__item input {
+  cursor: move;
+  /* cursor: pointer; */
+}

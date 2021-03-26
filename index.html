@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+
+  <!-- Шрифты с Гугл фонтс -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+  <!-- Мои шрифты -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="page">
+  
+
+
+    <!-- Наш ту-ду лист -->
+    <div class="toDo-list-wrapper">
+
+      <div class="yellow-header"></div>
+
+      <h1>To-Do List</h1>
+
+      <div class="wrapper-for-list-items-and-sort-button">
+        <!-- Кнопка - включающая стрелку и шашечки -->
+        <button class="sort-button">
+
+          <!-- Стрелка -->
+          <svg class="arrow-svg-icon" width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2.5" width="2.5" height="12.5" fill="#C4C4C4"/>
+            <path d="M3.75 15L0.502405 10.3125L6.9976 10.3125L3.75 15Z" fill="#C4C4C4"/>
+            </svg>
+            
+
+          <!-- Шашечки -->
+          <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="2.75" width="2.5" height="7.5" transform="rotate(-90 0 2.75)" fill="#C4C4C4"/>
+            <rect y="7.75" width="2.5" height="10" transform="rotate(-90 0 7.75)" fill="#C4C4C4"/>
+            <rect y="12.75" width="2.5" height="15" transform="rotate(-90 0 12.75)" fill="#C4C4C4"/>
+          </svg>
+
+        </button>
+        <!-- // Кнопка - включающая стрелку и шашечки -->
+
+        <!-- Список с нашими элементами -->
+        <ul class="list">
+
+          <li class="tasks__item" draggable= true>
+            <input class="list-item" type="text">
+            <button class="delete-button"></button>
+          </li>
+
+          <!-- <li class="tasks__item" draggable= true>
+             <input class="list-item" type="text" value="1">
+             <button class="delete-button"></button>
+          </li> -->
+
+          <!-- <li class="tasks__item" draggable= true>
+            <input class="list-item" type="text" value="2">
+            <button class="delete-button"></button>
+          </li>
+
+          <li class="tasks__item" draggable= true>
+            <input class="list-item" type="text" value="3">
+            <button class="delete-button"></button>
+          </li>
+
+          <li class="tasks__item" draggable= true>
+            <input class="list-item" type="text" value="4">
+            <button class="delete-button"></button>
+          </li>
+
+          <li class="tasks__item" draggable= true>
+            <input class="list-item" type="text" value="5">
+            <button class="delete-button"></button>
+          </li> -->
+
+        </ul>
+        <!-- // Список с нашими элементами -->
+        
+      </div>
+
+      <button class="add-new-list">
+        <div>+</div>
+        Добавить
+      </button>
+
+
+    </div>
+    <!-- // Наш ту-ду лист -->
+
+
+
+  <script src="./index.js"></script>
+</body>
+</html>
